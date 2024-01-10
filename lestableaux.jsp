@@ -23,6 +23,10 @@
     
 <h2>Exercice 1 : La carré de la première valeur</h2>
 <p>Ecrire un programme afin d'afficher le carré de la première valeur</p>
+<%
+    int premierCarre = Integer.parseInt(tableauDeChiffres[0]);
+    out.println("Le carré de la première valeur est : " + (premierCarre * premierCarre) + "<br>");
+%>
 
 <h2>Exercice 2 : La somme des 2 premières valeurs</h2>
 <p>Ecrire un programme afin d'afficher la somme des deux premières valeurs</p>
