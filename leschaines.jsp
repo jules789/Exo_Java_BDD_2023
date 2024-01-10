@@ -31,11 +31,9 @@
        int position = chaine.indexOf(recherche); %>
     <p>Votre premier "e" est en : <%= position %></p>
 
-
-    <h2>Exercice 1 : Combien de 'e' dans notre chaine de caractère ?</h2>
-    <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de caractères</p>
     
-
+<h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
+<p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
 
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
@@ -48,8 +46,6 @@ o</br>
 u</br>
 r</p>
 
-
-
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne </br>
 Exemple : L'hiver sera pluvieux</br>
@@ -57,27 +53,20 @@ L'hiver</br>
 sera</br>
 pluvieux</p>
 
-
-
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
 Exemple : L'hiver sera pluvieux</br>
 Lhvrsr lvex</p>
-
-
 
 <h2>Exercice 5 : La phrase en verlant</h2>
 <p>Ecrire le programme afin d'afficher le texte en verlant </br>
 Exemple : L'hiver sera pluvieux</br>
 xueivulp ares revih'l</p>
 
-
-
 <h2>Exercice 6 : Consonnes et voyelles</h2>
 <p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
 
 <% } %>
-
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
