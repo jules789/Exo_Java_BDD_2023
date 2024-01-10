@@ -55,7 +55,7 @@ Oui C est compris entre A et B</p>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
 
 <% 
-            int nombre = Integer.parseInt(request.getParameter("nombre"));
+            int nombre = Integer.parseInt(request.getParameter("valeur1"));
             if (nombre % 2 == 0) {
                 out.println(nombre + " est un nombre pair.");
             } else {
