@@ -39,10 +39,31 @@ B = 20</br>
 C = 15</br>
 Oui C est compris entre A et B</p>
 
+<%
+            int a = 10;
+            int b = 20;
+            int c = 15;
+            
+            if (c > a && c < b) {
+                out.println("Oui, C est compris entre A et B.");
+            } else {
+                out.println("Non, C n'est pas compris entre A et B.");
+            }
+        %>
+
 <h2>Exercice 2 : Pair ou Impair ?</h2>
 <p>Écrivez un programme pour vérifier si un nombre est pair ou impair en utilisant une structure if</p>
 
-<% } %>
+<% 
+            int nombre = Integer.parseInt(request.getParameter("nombre"));
+            if (nombre % 2 == 0) {
+                out.println(nombre + " est un nombre pair.");
+            } else {
+                out.println(nombre + " est un nombre impair.");
+            }
+        %>
+        
+    <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
 </body>
 </html>
