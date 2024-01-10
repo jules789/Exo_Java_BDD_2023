@@ -101,27 +101,28 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
 
-<% int Losange = Integer.parseInt(valeur); %>
-<% for (int i = 1; i <= Losange; i++) { %>
+<% int tailleLosange = Integer.parseInt(valeur); %>
+<% for (int i = 1; i <= tailleLosange; i++) { %>
     <%
-    for (int j = 0; j < Losange - i; j++) {
-        out.print("&nbsp;");
+    for (int j = 0; j < tailleLosange - i; j++) {
+        out.print("&nbsp;&nbsp;");
     }
     for (int k = 0; k < i; k++) {
         out.print("*");
     }
     %><br>
 <% } %>
-<% for (int i = Losange - 1; i > 0; i--) { %>
+<% for (int i = tailleLosange - 1; i > 0; i--) { %>
     <%
-    for (int j = 0; j < Losange - i; j++) {
-        out.print("&nbsp;");
+    for (int j = 0; j < tailleLosange - i; j++) {
+        out.print("&nbsp;&nbsp;");
     }
     for (int k = 0; k < i; k++) {
         out.print("*");
     }
     %><br>
 <% } %>
+
 
 
 <h2>Exercice 7 : La table de multiplication</h2>
