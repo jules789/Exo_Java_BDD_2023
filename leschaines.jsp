@@ -35,17 +35,17 @@
 <h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
 <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
 
-<% 
-String chaine = request.getParameter("chaine");
-if (chaine != null) {
-    int countE = 0;
-    for (int i = 0; i < chaine.length(); i++) {
-        if (chaine.charAt(i) == 'e') {
-            countE++;
+<%
+    if (chaine != null) {
+        int countE = 0;
+        for (int i = 0; i < chaine.length(); i++) {
+            if (chaine.charAt(i) == 'e') {
+                countE++;
+            }
         }
+        out.println("Nombre de 'e' dans la chaîne : " + countE);
     }
 %>
-<p>Le nombre de 'e' dans votre chaîne est : <%= countE %></p>
 
 <h2>Exercice 2 : Affichage verticale</h2>
 <p>Ecrire le programme pour afficher le texte en vertical</br>
