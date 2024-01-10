@@ -29,6 +29,13 @@
 <p>Ecrire le code afin de produire un carré d'étoile</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>*****</br>*****</br>*****</br>*****</br>*****</p>
+int taille = Integer.parseInt(valeur);
+for (int i = 0; i < taille; i++) {
+    for (int j = 0; j < taille; j++) {
+        out.print("*");
+    }
+    out.println();
+}
 
 <h2>Exercice 2 : Triangle rectangle gauche</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
