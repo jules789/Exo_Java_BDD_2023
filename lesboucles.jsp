@@ -76,17 +76,6 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 
-<% int TriangleDroite = Integer.parseInt(valeur); %>
-<% for (int i = 1; i <= TriangleDroite; i++) { %>
-    <%
-    for (int j = 0; j < TriangleDroite - i; j++) {
-        out.print("&nbsp;");
-    }
-    for (int k = 0; k < i; k++) {
-        out.print("*");
-    }
-    %><br>
-<% } %>
 
 
 <h2>Exercice 5 : Triangle isocele</h2>
@@ -112,6 +101,29 @@
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
 
+<% int Losange = Integer.parseInt(valeur); %>
+<% for (int i = 1; i <= tailleLosange; i++) { %>
+    <%
+    for (int j = 0; j < Losange - i; j++) {
+        out.print("&nbsp;");
+    }
+    for (int k = 0; k < i; k++) {
+        out.print("*");
+    }
+    %><br>
+<% } %>
+<% for (int i = Losange - 1; i > 0; i--) { %>
+    <%
+    for (int j = 0; j < Losange - i; j++) {
+        out.print("&nbsp;");
+    }
+    for (int k = 0; k < i; k++) {
+        out.print("*");
+    }
+    %><br>
+<% } %>
+
+
 <h2>Exercice 7 : La table de multiplication</h2>
 <p>Ecrire le code afin de créser une table de multiplication</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
@@ -120,6 +132,11 @@
 <p>5 x 3 = 15</p>
 <p>5 x 4 = 20</p>
 <p>5 x 5 = 25</p>
+
+<% int table = Integer.parseInt(valeur); %>
+<% for (int i = 1; i <= 5; i++) { %>
+    <%= table + " x " + i + " = " + (table * i) %><br>
+<% } %>
 
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
