@@ -30,10 +30,10 @@
 <p>Ecrire le code afin de produire un carré d'étoile</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>*****</br>*****</br>*****</br>*****</br>*****</p>
-<% int tailleCarre = Integer.parseInt(valeur); %>
-<% for (int i = 0; i < tailleCarre; i++) { %>
+<% int Carre = Integer.parseInt(valeur); %>
+<% for (int i = 0; i < Carre; i++) { %>
     <%
-    for (int j = 0; j < tailleCarre; j++) {
+    for (int j = 0; j < Carre; j++) {
         out.print("*");
     }
     %><br>
@@ -45,8 +45,9 @@
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>*</br>**</br>***</br>****</br>*****</p>
-<% int tailleTriangle = Integer.parseInt(valeur); %>
-<% for (int i = 0; i < tailleTriangle; i++) { %>
+
+<% int Triangle = Integer.parseInt(valeur); %>
+<% for (int i = 0; i < Triangle; i++) { %>
     <%
     for (int j = 0; j <= i; j++) {
         out.print("*");
@@ -59,16 +60,51 @@
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>*****</br>****</br>***</br>**</br>*</p>
 
+<% int tailleInverse = Integer.parseInt(valeur); %>
+<% for (int i = tailleInverse; i > 0; i--) { %>
+    <%
+    for (int j = 0; j < i; j++) {
+        out.print("*");
+    }
+    %><br>
+<% } %>
+
+
 
 <h2>Exercice 4 : Triangle rectangle 2</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la droite</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;***</br>&nbsp;&nbsp;****</br>*****</p>
 
+<% int TriangleDroite = Integer.parseInt(valeur); %>
+<% for (int i = 1; i <= TriangleDroite; i++) { %>
+    <%
+    for (int j = 0; j < TriangleDroite - i; j++) {
+        out.print("&nbsp;");
+    }
+    for (int k = 0; k < i; k++) {
+        out.print("*");
+    }
+    %><br>
+<% } %>
+
+
 <h2>Exercice 5 : Triangle isocele</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la droite</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>&nbsp;&nbsp;&nbsp;&nbsp;*</br>&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;***</br>&nbsp;****</br>*****</p>
+
+<% int TriangleIsocele = Integer.parseInt(valeur); %>
+<% for (int i = 1; i <= TriangleIsocele; i++) { %>
+    <%
+    for (int j = 0; j < TriangleIsocele - i; j++) {
+        out.print("&nbsp;");
+    }
+    for (int k = 0; k < i; k++) {
+        out.print("*");
+    }
+    %><br>
+<% } %>
 
 <h2>Exercice 6 : Le demi losange</h2>
 <p>Ecrire le code afin de produire un losange</p>
