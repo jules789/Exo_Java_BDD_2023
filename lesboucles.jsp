@@ -18,13 +18,7 @@
 <% if (valeur != null && !valeur.isEmpty()) { %>
 
 <%-- Boucle for pour afficher une ligne d'étoiles --%>
-  int taille = Integer.parseInt(valeur);
-for (int i = 0; i < taille; i++) {
-    for (int j = 0; j < taille; j++) {
-        out.print("*");
-    }
-    out.println();
-}
+
 
     </p>
 
