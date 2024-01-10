@@ -58,25 +58,74 @@ o</br>
 u</br>
 r</p>
 
+<%
+    if (chaine != null) {
+        for (int i = 0; i < chaine.length(); i++) {
+            out.println(chaine.charAt(i) + "<br>");
+        }
+    }
+%>
+
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne </br>
 Exemple : L'hiver sera pluvieux</br>
 L'hiver</br>
 sera</br>
 pluvieux</p>
+<%
+    if (chaine != null) {
+        String[] mots = chaine.split("\\s+");
+        for (String mot : mots) {
+            out.println(mot + "<br>");
+        }
+    }
+%>
 
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
 Exemple : L'hiver sera pluvieux</br>
 Lhvrsr lvex</p>
+<%
+    if (chaine != null) {
+        for (int i = 0; i < chaine.length(); i += 2) {
+            out.println(chaine.charAt(i));
+        }
+    }
+%>
 
 <h2>Exercice 5 : La phrase en verlant</h2>
 <p>Ecrire le programme afin d'afficher le texte en verlant </br>
 Exemple : L'hiver sera pluvieux</br>
 xueivulp ares revih'l</p>
+<%
+    if (chaine != null) {
+        for (int i = chaine.length() - 1; i >= 0; i--) {
+            out.print(chaine.charAt(i));
+        }
+    }
+%>
 
 <h2>Exercice 6 : Consonnes et voyelles</h2>
 <p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
+<%
+    if (chaine != null) {
+        int voyelles = 0;
+        int consonnes = 0;
+        chaine = chaine.toLowerCase(); // Convertir en minuscules pour la comparaison
+        for (int i = 0; i < chaine.length(); i++) {
+            char c = chaine.charAt(i);
+            if (c >= 'a' && c <= 'z') {
+                if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                    voyelles++;
+                } else {
+                    consonnes++;
+                }
+            }
+        }
+        out.println("Nombre de voyelles : " + voyelles + "<br>");
+        out.println("Nombre de consonnes : " + consonnes + "<br>");
+    }
+%>
 
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
