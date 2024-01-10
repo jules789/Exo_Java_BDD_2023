@@ -45,6 +45,14 @@
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
 <p>Exemple si l'utilisateur saisie le valeur 5</p>
 <p>*</br>**</br>***</br>****</br>*****</p>
+<% int tailleTriangle = Integer.parseInt(valeur); %>
+<% for (int i = 0; i < tailleTriangle; i++) { %>
+    <%
+    for (int j = 0; j <= i; j++) {
+        out.print("*");
+    }
+    %><br>
+<% } %>
 
 <h2>Exercice 3 : Triangle rectangle inversé</h2>
 <p>Ecrire le code afin de produire un triangle rectangle aligné sur la gauche</p>
