@@ -102,7 +102,7 @@
 <p>*****</br>&nbsp;&nbsp;****</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**</br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*</p>
 
 <% int Losange = Integer.parseInt(valeur); %>
-<% for (int i = 1; i <= tailleLosange; i++) { %>
+<% for (int i = 1; i <= Losange; i++) { %>
     <%
     for (int j = 0; j < Losange - i; j++) {
         out.print("&nbsp;");
