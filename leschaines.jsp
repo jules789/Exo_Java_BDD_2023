@@ -32,10 +32,13 @@
     <p>Votre premier "e" est en : <%= position %></p>
 
     
-<h2>Exercice 1 : Combien de 'e' dans notre chaine de charactère ?</h2>
-<p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de charactères</p>
-
-<% for (int i = 0; i < chaine.length(); i++) {
+<% String chaine = request.getParameter("chaine"); %>
+<% if (chaine != null && chaine.length() >= 6) { %>
+    <h2>Exercice 1 : Combien de 'e' dans notre chaine de caractère ?</h2>
+    <p>Ecrire un programme pour compter le nombre de lettre e dans votre chaine de caractères</p>
+    <% 
+        int countE = 0; 
+        for (int i = 0; i < chaine.length(); i++) {
             if (chaine.charAt(i) == 'e') {
                 countE++;
             }
@@ -55,9 +58,12 @@ o</br>
 u</br>
 r</p>
 
-<% for (int i = 0; i < chaine.length(); i++) { %>
-            <p><%= chaine.charAt(i) %></p>
-        <% } %>
+<% 
+        for (int i = 0; i < chaine.length(); i++) {
+            %><p><%= chaine.charAt(i) %></p><%
+        }
+    %>
+<% } %>
 
 <h2>Exercice 3 : Retour à la ligne</h2>
 <p>La présence d'un espace provoque un retour à la ligne </br>
@@ -66,47 +72,59 @@ L'hiver</br>
 sera</br>
 pluvieux</p>
 
-<% String[] mots = chaine.split(" "); %>
-        <% for (String mot : mots) { %>
-            <p><%= mot %></p>
-        <% } %>
+<% 
+        String[] mots = chaine.split(" ");
+        for (String mot : mots) {
+            %><p><%= mot %></p><%
+        }
+    %>
+<% } %>
 
 <h2>Exercice 4 : Afficher une lettre sur deux</h2>
 <p>Ecrire le programme pour afficher seulement une lettre sur deux de votre texte </br>
 Exemple : L'hiver sera pluvieux</br>
 Lhvrsr lvex</p>
 
-<% for (int i = 0; i < chaine.length(); i += 2) { %>
-            <p><%= chaine.charAt(i) %></p>
-        <% } %>
+<% 
+        for (int i = 0; i < chaine.length(); i += 2) {
+            %><p><%= chaine.charAt(i) %></p><%
+        }
+    %>
+<% } %>
 
 <h2>Exercice 5 : La phrase en verlant</h2>
 <p>Ecrire le programme afin d'afficher le texte en verlant </br>
 Exemple : L'hiver sera pluvieux</br>
 xueivulp ares revih'l</p>
 
-<% for (int i = chaine.length() - 1; i >= 0; i--) { %>
-            <p><%= chaine.charAt(i) %></p>
-        <% } %>
+<% 
+        for (int i = chaine.length() - 1; i >= 0; i--) {
+            %><p><%= chaine.charAt(i) %></p><%
+        }
+    %>
+<% } %>
 
 <h2>Exercice 6 : Consonnes et voyelles</h2>
 <p>Ecrire le programme afin de compter les consonnes et les voyelles dans votre texte</p>
 
-<% int voyelles = 0;
-           int consonnes = 0;
-           for (int i = 0; i < chaine.length(); i++) {
-               char c = chaine.charAt(i);
-               if (Character.isLetter(c)) {
-                   if ("AEIOUYaeiouy".indexOf(c) != -1) {
-                       voyelles++;
-                   } else {
-                       consonnes++;
-                   }
-               }
-           }
-        %>
-<p>Nombre de voyelles : <%= voyelles %></p>
-        <p>Nombre de consonnes : <%= consonnes %></p>
+<% 
+        int voyelles = 0;
+        int consonnes = 0;
+        String vowels = "aeiouAEIOU";
+        for (int i = 0; i < chaine.length(); i++) {
+            char c = chaine.charAt(i);
+            if (Character.isLetter(c)) {
+                if (vowels.indexOf(c) != -1) {
+                    voyelles++;
+                } else {
+                    consonnes++;
+                }
+            }
+        }
+    %>
+    <p>Nombre de voyelles : <%= voyelles %></p>
+    <p>Nombre de consonnes : <%= consonnes %></p>
+<% } %>
         
 <% } %>
 <p><a href="index.html">Retour au sommaire</a></p>
