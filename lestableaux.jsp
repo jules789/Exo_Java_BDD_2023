@@ -24,14 +24,6 @@
 <h2>Exercice 1 : La carré de la première valeur</h2>
 <p>Ecrire un programme afin d'afficher le carré de la première valeur</p>
 
-<% 
-String chaine = request.getParameter("chaine");
-if (chaine != null) {
-    String[] tableauDeChiffres = chaine.split("\\s+");
-    int premierCarre = Integer.parseInt(tableauDeChiffres[0]) * Integer.parseInt(tableauDeChiffres[0]);
-%>
-
-<% } %>
 
 
 <h2>Exercice 2 : La somme des 2 premières valeurs</h2>
